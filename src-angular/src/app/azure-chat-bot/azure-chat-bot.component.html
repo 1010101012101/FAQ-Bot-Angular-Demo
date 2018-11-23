@@ -1,0 +1,8 @@
+<div id="BotChatGoesHere" [hidden]="hideChatForm" [@openClose]="hideChatForm ? 'open' : 'closed'"></div>
+
+<button class="btn btn--large" (click)="startChat()" *ngIf="hideChatForm">
+  <svg aria-hidden="true" class="btn__icon">
+    <use xlink:href="#icon-customer-care"></use>
+  </svg>
+  <span class="btn__icon-text">Ask for help</span>
+</button>

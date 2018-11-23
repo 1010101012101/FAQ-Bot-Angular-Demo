@@ -1,0 +1,89 @@
+<!-- START MODULE CONTAINER BLOCK -->
+<section class="module-container module-container--medium ">
+  <div class="module-container__content">
+    <div class="module-container__content-inner">
+      <!-- START TEXT - H1 MODULE-->
+      <h1 class="text type-xxxlarge type-uppercase">Register Your Card</h1>
+      <!-- END TEXT - H1 MODULE-->
+      <form action="/register/" autocomplete="off" id="frm-enter-card" method="post"><input name="__RequestVerificationToken"
+          type="hidden" value="-YicJAaB4ptj5GvahEOygiwBJY7Z95oLr2YUCNEdlugNY5kCLlwtHxSJvpM0GiSzGJjA1QHdqwCsaEP7tnMQpCcMrj41" />
+        <div class="gap-bottom-large"></div>
+        <!-- START MODAL - BASIC MODULE-->
+        <div class="modal js-modal modal--inline modal--large" id="">
+          <header class="modal__header js-modal-header">
+            <div class="modal__header-title js-modal-header-title"></div>
+            <button class="modal__close js-modal-close" aria-label="Close modal">
+              <svg class="modal__close-icon" aria-hidden="true">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </header>
+          <div class="modal__content js-modal-content gap-bottom-small">
+            <!-- START TEXT - PARAGRAPH MODULE-->
+            <p class="text type-medium input-password-requirements__heading">Please enter your 16-digit card number,
+              expiration date and the 3-digit security code on the back of your card.</p>
+            <!-- END TEXT - PARAGRAPH MODULE-->
+            <!-- START INPUT PAN W/CVV AND EXPIRATION MODULE-->
+            <div class="input-container ">
+              <div class="input js-input input--one-half">
+                <div class="input__inner">
+                  <label class="input__label">
+                    <div class="input__label-content js-input-label-content">16-digit card number</div>
+                  </label>
+
+                  <input autocomplete="cc-number" autocorrect="off" class="input__field js-input-field js-input-mask-pan"
+                    data-field-name="CardNumber" data-val="true" data-val-regex="Please enter the card number."
+                    data-val-regex-pattern="\d{4}\s*\d{4}\s*\d{4}\s*\d{4}\s*" data-val-required="Please enter the card number."
+                    id="CardNumber" name="CardNumber" pattern="\d*" placeholder="16-digit card number" type="tel" value="" />
+                  <div class="input__required-badge"></div>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="CardNumber" data-valmsg-replace="true"></span>
+              </div>
+              <div class="input js-input input--one-quarter">
+                <div class="input__inner">
+                  <label class="input__label">
+                    <div class="input__label-content js-input-label-content">MM/YY</div>
+                  </label>
+                  <input autocomplete="cc-exp" autocorrect="off" class="input__field js-input-field js-input-mask-expiration"
+                    data-field-name="ExpireDate" data-val="true" data-val-regex="Please enter a valid expiration date."
+                    data-val-regex-pattern="^(0?[1-9]|1[012])[-/]\d\d$" data-val-required="Please enter the card expiration date."
+                    id="ExpireDate" name="ExpireDate" pattern="\d*" placeholder="MM/YY" type="tel" value="" />
+                  <div class="input__required-badge"></div>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="ExpireDate" data-valmsg-replace="true"></span>
+              </div>
+              <div class="input js-input input--one-quarter">
+                <div class="input__inner">
+                  <label class="input__label">
+                    <div class="input__label-content js-input-label-content">CVV</div>
+                  </label>
+                  <input autocomplete="cc-csc" autocorrect="off" class="input__field js-input-field js-input-mask-char-three"
+                    data-field-name="CVV" data-val="true" data-val-regex="Please enter the 3 digit security code."
+                    data-val-regex-pattern="\d{3}" data-val-required="Please enter the 3 digit security code." id="CVV"
+                    name="CVV" pattern="\d*" placeholder="CVV" type="tel" value="" />
+                  <div class="input__required-badge"></div>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="CVV" data-valmsg-replace="true"></span>
+              </div>
+            </div>
+            <!-- END INPUT PAN W/CVV AND EXPIRATION MODULE-->
+          </div>
+          <div class="modal__success js-modal-success" id="-success">
+            <svg class="modal__success-icon" role="img" aria-label="Success icon">
+              <use xlink:href="#icon-checkmark-circle"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="modal-background js-modal-close"></div>
+        <!-- END MODAL - BASIC MODULE-->
+        <!-- START BUTTON MODULE-->
+        <button class="btn small-4 medium-4 large-4 pull-right " name="" value="" id="submit-button" type="submit">
+          Continue </button>
+        <!-- END BUTTON MODULE-->
+        <div id="recaptcha">
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- END MODULE CONTAINER BLOCK -->

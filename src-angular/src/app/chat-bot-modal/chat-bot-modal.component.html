@@ -1,0 +1,37 @@
+<form *ngIf="showChatForm" class="bg-color-white">
+  <div class="message-container">
+    <div class="message-header" (click)="closeChat()">
+      <span>Chatting</span>
+      <svg class="input__select-arrow" aria-hidden="true">
+        <use xlink:href="#icon-chevron-down"></use>
+      </svg>
+    </div>
+    <div class="message-content">
+      <div *ngFor="let message of messageList" class="message-block">
+        <div class="user-message">
+          <span>{{message.question}}</span>
+        </div>
+        <div style="clear: both"></div>
+        <div class="bot-message">
+          <span>{{message.answer}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input js-input">
+    <div class="input__inner">
+      <input class="input__field" placeholder="Your question" [(ngModel)]="question" name="question" (keyup.enter)="sendMessage()"
+        autocomplete="off" autofocus>
+      <svg class="input__select-arrow" aria-hidden="true" (click)="sendMessage()">
+        <use xlink:href="#icon-feedback"></use>
+      </svg>
+    </div>
+    <div class="input__error-text">Lorem ipsum dolor sit amet</div>
+  </div>
+</form>
+<button class="btn btn--large" (click)="startChat()" *ngIf="!showChatForm">
+  <svg aria-hidden="true" class="btn__icon">
+    <use xlink:href="#icon-customer-care"></use>
+  </svg>
+  <span class="btn__icon-text">Ask for help</span>
+</button>

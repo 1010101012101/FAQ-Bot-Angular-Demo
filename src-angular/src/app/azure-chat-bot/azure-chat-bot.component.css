@@ -1,0 +1,16 @@
+  #BotChatGoesHere {
+    float: left;
+    height: 600px;
+    position: relative;
+    width: 460px;
+    background-color: white;
+  }
+  @media(max-width:475px) {
+    #BotChatGoesHere {
+      float: left;
+      height: 400px;
+      position: relative;
+      width: 100vw;
+      background-color: white;
+    }
+  }
